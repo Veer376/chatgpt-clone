@@ -14,7 +14,7 @@ export default function Composer({ value, onChange, onSend }: ComposerProps) {
                 value={value}
                 onChange={(e) => onChange(e.target.value)}
                 placeholder="Type your message..."
-                className="flex-1 rounder-full outline-none bg-transparent"
+                className="flex-1 rounded-full outline-none bg-transparent text-slate-900 placeholder:text-slate-500"
                 type="text"
                 onKeyDown={(e) => {
                     if (e.key === "Enter" && !e.shiftKey) {
@@ -28,9 +28,8 @@ export default function Composer({ value, onChange, onSend }: ComposerProps) {
             <button 
                 disabled={value.trim() === ""}
                 onClick={() => onSend(value)}
-                className="ml-2 border-2 bg-black text-white disabled:opacity-50 disabled:cursor-not-allowed px-4 py-2 rounded-full"
-            >
-                Send
+                className="ml-2 rounded-full bg-slate-800 px-6 py-2 text-white transition-colors hover:bg-slate-700 disabled:opacity-50"
+            >    Send
             </button>
             
         </div>

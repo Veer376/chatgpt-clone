@@ -13,13 +13,12 @@ export default function MessagesContainer( { messages, isLoading }: MessagesCont
         <div className="flex-1 overflow-y-auto p-4">
             {messages.length === 0 ? (
                 <div className="flex min-h-[50vh] items-center justify-center text-sm text-slate-500">
-                    What can i help you with?
                 </div>
             ) : <div className="flex flex-col gap-4">
                 {
                     messages.map((message) => (
                         <div key={message.id} className={`flex ${message.role === "user" ? "justify-end" : "justify-start"}`}>
-                            <div className={`max-w-[85%] rounded-2xl px-4 py-3 text-sm leading-6 ${message.role === "user" ? "bg-white text-slate-950" : "bg-slate-900 text-slate-100"}`}>
+                            <div className={`max-w-[85%] rounded-3xl px-5 py-3 shadow-md ${message.role === "user" ? "bg-white text-slate-950" : "bg-slate-900 text-slate-100"}`}>
                                 {message.content}
                             </div>
                         </div>

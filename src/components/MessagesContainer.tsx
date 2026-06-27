@@ -19,7 +19,7 @@ export default function MessagesContainer( { messages, isLoading }: MessagesCont
                 {
                     messages.map((message) => (
                         <div key={message.id} className={`flex ${message.role === "user" ? "justify-end" : "justify-start"}`}>
-                            <div className={`max-w-[85%] rounded-2xl px-4 py-3 text-sm leading-6 ${message.role === "user" ? "bg-white text-slate-950" : "bg-slate-900 text-slate-100"}`}>
+                            <div className={`max-w-[85%] rounded-full px-4 py-3 text-sm leading-6 ${message.role === "user" ? "bg-white text-slate-950" : "text-black"}`}>
                                 {message.content}
                             </div>
                         </div>
@@ -28,7 +28,7 @@ export default function MessagesContainer( { messages, isLoading }: MessagesCont
                 </div>
             }
 
-            {isLoading && <div className="flex justify-center p-4"> Loading... </div>}
+            {isLoading && <div className="flex justify-start p-4 text-black"> Loading... </div>}
         </div>
     )
 }

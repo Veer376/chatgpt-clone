@@ -13,7 +13,7 @@ function App() {
     } = useChat();
 
   return (
-    <div className="flex h-dvh flex-col bg-slate-950 text-slate-90">
+    <div className="flex h-dvh flex-col bg-slate-200 text-slate-90">
       <MessagesContainer messages={messages} isLoading={isLoading} />
       <Composer value={input} onChange={setInput} onSend={sendMessage} />
     </div>

@@ -4,6 +4,8 @@ const BASE = "http://localhost:3000";
 
 const getChatResponse = async(messages: Message[], model: string) => {
 
+    // throw new Error("getChatResponse function is not implemented yet.");
+    
     const response = await fetch(`${BASE}/chat`, {
         method: "POST",
         headers: {

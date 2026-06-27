@@ -11,11 +11,6 @@ interface MessagesContainerProps {
 
 export default function MessagesContainer( { messages, isLoading, error, retry }: MessagesContainerProps ) {
 
-
-    useEffect(() => {
-        console.log("error", error);
-    }, [messages, error, isLoading]);
-
     return (
         <div className="flex-1 overflow-y-auto p-4">
             {messages.length === 0 ? (

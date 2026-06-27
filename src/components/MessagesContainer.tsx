@@ -33,7 +33,7 @@ export default function MessagesContainer( { messages, isLoading, error, retry }
             {isLoading && <div className="flex justify-start p-4 text-black"> Loading... </div> }
             
             {error && (
-                <div className="flex items-center justify-between p-4 bg-white ">
+                <div className="flex items-center justify-between rounded-full max-w-[60%] p-2 bg-white ">
                     <div className="text-red-700 px-4 py-2">
                         {error}
                     </div>

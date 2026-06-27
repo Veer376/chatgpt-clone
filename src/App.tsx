@@ -13,11 +13,10 @@ function App() {
     } = useChat();
 
   return (
-  <div className="flex h-dvh flex-col bg-slate-900 text-slate-100">
-    
-    <h1 className="py-4 text-center text-3xl font-bold tracking-wide text-white">
-      ChatGPT Clone
-    </h1>
+  <div className="flex h-dvh flex-col bg-gradient-to-b from-slate-950 to-slate-900 text-slate-100">
+  <h1 className="py-5 text-center text-4xl font-extrabold tracking-tight text-white drop-shadow-sm">
+    ChatGPT Clone
+  </h1>
 
     <MessagesContainer messages={messages} isLoading={isLoading} />
 

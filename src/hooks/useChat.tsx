@@ -83,6 +83,12 @@ export default function useChat() {
     }
      
   }
+  const newChat = () => {
+    setMessages([]);
+    setInput("");
+    setError(null);
+    setIsLoading(false);
+  };
 
   return {
     messages,
@@ -94,5 +100,6 @@ export default function useChat() {
     retry,
     model,
     setModel,
-  };
+    newChat,
+ };
 }

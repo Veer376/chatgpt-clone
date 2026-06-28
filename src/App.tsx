@@ -1,7 +1,7 @@
 import Composer from "./components/Composer";
 import MessagesContainer from "./components/MessagesContainer";
 import useChat from "./hooks/useChat";
-
+import Navbar from "./components/Navbar";
 function App() {
 
   const {
@@ -18,6 +18,7 @@ function App() {
 
   return (
     <div className="flex h-dvh flex-col bg-slate-200 text-slate-90">
+      <Navbar/>
       <MessagesContainer messages={messages} isLoading={isLoading} error={error} retry={retry} />
       <Composer value={input} onChange={setInput} onSend={sendMessage} model={model} onModelChange={setModel} />
     </div>

@@ -1,4 +1,3 @@
-
 interface Message {
     id: string;
     role: "user" | "assistant";
@@ -6,4 +5,3 @@ interface Message {
 }
 
 export type { Message };
-
